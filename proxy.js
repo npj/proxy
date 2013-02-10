@@ -64,6 +64,7 @@ function proxyHttp(req, res, proxy) {
 }
 
 function proxyHttps(req, source, head) {
+  console.log("req:", req);
 
   var dest = net.connect((new Host(req.url)).toOptions());
 
