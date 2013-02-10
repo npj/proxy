@@ -87,6 +87,7 @@ function proxyHttps(req, source, head) {
 }
 
 var opts = {
+  changeOrigin: true,
   enable: {
     xforward: false
   }
@@ -94,5 +95,5 @@ var opts = {
 
 proxy.createServer(opts, proxyHttp).on('connect', proxyHttps).listen(process.env['PORT']);
 
-console.log("Proxy running on port ", process.env['PORT']);
+console.log("Proxy running on port", process.env['PORT']);
 
