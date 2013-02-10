@@ -92,7 +92,7 @@ var opts = {
   }
 }
 
-proxy.createServer(opts, proxyHttp).on('connect', proxyHttps).listen(8080);
+proxy.createServer(opts, proxyHttp).on('connect', proxyHttps).listen(process.env['PORT']);
 
-console.log("Proxy running on port 8080");
+console.log("Proxy running on port ", process.env['PORT']);
 
