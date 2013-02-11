@@ -55,7 +55,6 @@ Auth.authenticate = function(req, res, callback) {
 }
 
 function proxyHttp(req, res, proxy) {
-  console.log("req:", req);
   Auth.authenticate(req, res, function() {
     req.url = url.parse(req.url).path;
     proxy.proxyRequest(req, res, (new Host(req.headers.host)).toOptions());
