@@ -1,3 +1,3 @@
 # Proxy
 
-A basic web proxy ready for deply to heroku.
+A basic web proxy with SSL support.
